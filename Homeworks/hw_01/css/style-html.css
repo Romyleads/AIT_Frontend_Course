@@ -1,19 +1,22 @@
 html,
 body {
-  height: 100;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 body {
   background-color: #f5f5f5;
-  background: linear-gradient(135deg, #cce8f4, #fbe7f5);
+  background: linear-gradient(100deg, #cce8f4, #fbe7f5);
   font-family: Arial, sans-serif;
   padding-bottom: 0;
-  margin-bottom: 0;
-  padding-top: 40px;
+  padding-top: 0px;
+}
+h1 {
+  padding-top: 25px;
 }
 h4 {
-  padding-top: 15px;
+  padding-top: 25px;
+  padding-bottom: 15px;
 }
 div {
   position: absolute;
@@ -21,8 +24,11 @@ div {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
   text-align: center;
   padding-left: 5%;
   padding-right: 5%;
+ border: 1px solid #fff;
+ border-radius: 12px;
+padding-bottom: 10px;
 }
