@@ -16,7 +16,7 @@ body {
 }
 
 div {
-  width: 60%;
+  width: 70%;
   background-color: rgba(255, 255, 255, 0.7);
   text-align: center;
   padding: 25px;
@@ -36,9 +36,16 @@ div {
 h4 {
   padding-top: 25px;
   padding-bottom: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
 }
-h4.compact {
+.compact {
   padding-top: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
+}
+p.compact{
+padding-bottom: 10px;
 }
 p,
 h4 {
@@ -47,4 +54,8 @@ h4 {
 
 img {
   margin: 16px 0;
+}
+code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
 }
