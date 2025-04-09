@@ -9,7 +9,7 @@ body {
   text-align: center;
   margin: 0;
   background-color: #f8f8f8;
-  background-image: repeating-linear-gradient(55deg, #f0f0f0 0px, #f0f0f0 26px, #ffffff 26px, #ffffff 28px);
+  /*background-image: repeating-linear-gradient(55deg, #f0f0f0 0px, #f0f0f0 26px, #ffffff 26px, #ffffff 28px);*/ 
   color: #355765;
 }
 
