@@ -1,0 +1,127 @@
+<!-- "!" для шаблона html-document  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* h1 {
+        font-size: 40px;
+      }
+
+      .header {
+        color: aqua;
+      }
+
+      #name, h1 {
+        padding: 5px;
+      } */
+    </style>
+    <link rel="stylesheet" href="./style.css">
+    <title>Form</title>
+  </head>
+  <!-- 
+    Где будет задаваться стилистика
+  1. inline-styles (в той же строке где тэг, в атрибуте style)
+  2. в отдельном тэге <style>
+  3. в отдельном файле
+    
+    С помощью чего мы выбираем элемент(-ы) для стилизации (selectors)
+  1. По имени тэга;
+  2. По имени класса;
+  3. По id.
+  -->
+  <body>
+    <h1 class="header" style="text-align: center">Signup form</h1>
+
+    <form action="/register">
+      <div>
+        <label for="name">Name: </label>
+        <input
+          id="name"
+          type="text"
+          placeholder="Enter your name..."
+          required
+        />
+      </div>
+
+      
+      <div>
+        <label for="email">Email: </label>
+        <input
+          id="email"
+          type="email"
+          placeholder="Enter your email..."
+          required
+        />
+      </div>
+
+      
+      <div>
+        <label for="password">Password: </label>
+        <!-- minlength="8" - минимальная длина 8 символов -->
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter your password..."
+          title="Требования к паролю: заглавная буква, маленькая букв, цифра, спецсимвол и минимум 8 символов"
+          pattern="(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[@$!%*?&]).{8,}"
+          required
+        />
+      </div>
+
+      
+      <div>
+        <label for="phone">Phone: </label>
+        <!-- minlength="8" - минимальная длина 8 символов -->
+        <input
+          id="phone"
+          type="tel"
+          placeholder="Enter your phone number..."
+          title="Example: +123-456-7890"
+          pattern="\+?[0-9]{3}-?[0-9]{3}-?[0-9]{4}"
+          required
+        />
+      </div>
+
+      
+      <div>
+        <label for="hobby">Hobby: </label>
+        <select id="hobby" required>
+          <option value="">Choose your hobby...</option>
+          <option value="sport">Football</option>
+          <option value="sport">Volleyball</option>
+          <option value="music">Guitar</option>
+          <option value="music">Piano</option>
+        </select>
+      </div>
+
+      
+      <div>
+        <label for="agreement">Agreement: </label>
+        <!-- minlength="8" - минимальная длина 8 символов -->
+        <input id="agreement" type="checkbox" required />
+      </div>
+
+      
+      <div>
+        <label for="male">Male: </label>
+        <!-- minlength="8" - минимальная длина 8 символов -->
+        <input name="gender" id="male" type="radio" required />
+        <label for="female">Female: </label>
+        <!-- minlength="8" - минимальная длина 8 символов -->
+        <input name="gender" id="female" type="radio" />
+      </div>
+
+      <!-- div - блочный элемент по умолчанию -->
+      <!-- span - строчный элемент по умолчанию -->
+      <!-- br - break row - прервать строчку -->
+      <!-- hr - horizontal row - линия -->
+            
+      <div class="btn">
+        <button type="reset">Reset</button>
+        <button type="submit">Register</button>
+      </div>
+    </form>
+  </body>
+</html>
