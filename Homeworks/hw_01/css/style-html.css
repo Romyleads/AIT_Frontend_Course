@@ -59,3 +59,13 @@ code {
   font-family: 'Courier New', Courier, monospace;
   font-size: 1em;
 }
+.banderogus-launch {
+  padding: 12px 24px;
+  background: #ff6b0a;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
