@@ -9,6 +9,10 @@ lib/
 *.iml
 Clone3/
 theory/
+api/send.php
+api/PHPMailer.php
+api/SMTP.php
+api/Exception.php
 
 ### Eclipse ###
 .apt_generated
