@@ -16,7 +16,7 @@ jobs:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v3
 
-      # 🚀 Отправить файлы на FTP-сервер1
+      # 🚀 Отправить файлы на FTP-сервер
       - name: 📤 Deploy to FTP Server
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
