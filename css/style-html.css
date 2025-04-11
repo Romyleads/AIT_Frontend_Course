@@ -202,3 +202,10 @@ input:focus::placeholder, textarea:focus::placeholder {
 input::placeholder, textarea::placeholder {
   visibility: hidden;
 }
+.form-group.topic-field {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  position: relative;
+}

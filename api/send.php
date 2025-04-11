@@ -8,7 +8,7 @@ $yourAppPassword = "czvehuzgtichsttb";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $message = trim($_POST["message"] ?? "");
-    $bot = trim($_POST["bot-check"] ?? "");
+    $bot = trim($_POST["topic"] ?? "");
 
     if ($bot !== "" || empty($message)) {
         http_response_code(400);
