@@ -171,9 +171,11 @@ input, textarea {
   color: #333;
   outline: none;
 }
-textarea {
-  height: 120px;
-  margin-bottom: 12px;
+form textarea {
+  height: 140px;             
+  padding-top: 10px;         
+  box-sizing: border-box;    
+  vertical-align: top;      
 }
 label {
   position: absolute;
