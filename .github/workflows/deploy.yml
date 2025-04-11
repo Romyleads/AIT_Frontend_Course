@@ -26,9 +26,9 @@ jobs:
   server-dir: ${{ secrets.FTP_TARGET_FOLDER }}
   passive: true
   dangerous-clean-slate: true
-  exclude:
-    - **/.git*
-    - **/.github/**
-    - **/README.md
-    - **/Homeworks/**
-    - **/[0-9]* */
+   exclude:
+    - '**/.git*'
+    - '**/.github/**'
+    - '**/README.md'
+    - '**/Homeworks/**'
+    - '**/[0-9]*_*/'
