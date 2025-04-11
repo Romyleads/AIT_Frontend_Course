@@ -20,14 +20,15 @@ jobs:
       - name: 📤 Deploy to FTP Server
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ${{ secrets.FTP_TARGET_FOLDER }}
-          exclude: |
-            **/.git*
-            **/.github/**
-            **/README.md
-            **/Homeworks/**
-            **/[0-9]*_*/
-            dangerous-clean-slate: true
+  server: ${{ secrets.FTP_SERVER }}
+  username: ${{ secrets.FTP_USERNAME }}
+  password: ${{ secrets.FTP_PASSWORD }}
+  server-dir: ${{ secrets.FTP_TARGET_FOLDER }}
+  passive: true
+  dangerous-clean-slate: true
+  exclude:
+    - **/.git*
+    - **/.github/**
+    - **/README.md
+    - **/Homeworks/**
+    - **/[0-9]* */
