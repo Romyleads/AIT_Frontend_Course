@@ -31,3 +31,9 @@ jobs:
            **/Homeworks/**
            **/[0-9][0-9]_*/**
            **/api/**
+           */.ftp-deploy-sync-state
+           **/.ftpquota
+           **/node_modules/**
+           **/temp/**
+           **/.vscode/**
+
