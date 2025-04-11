@@ -30,8 +30,5 @@ jobs:
            **/.github/**
            **/README.md
            **/Homeworks/**
-           [0-9][0-9]_*/**
-           api/send.php
-           api/PHPMailer.php
-           api/SMTP.php
-           api/Exception.php
+           **/[0-9][0-9]_*/**
+           **/api/**
