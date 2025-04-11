@@ -205,9 +205,8 @@ input::placeholder, textarea::placeholder {
 .form-group.topic-field {
   height: 0;
   overflow: hidden;
-  opacity: 0;
-  visibility: hidden;
   position: relative;
+  display: none;
 }
 #spinner {
   display: none;
