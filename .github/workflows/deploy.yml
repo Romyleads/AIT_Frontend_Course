@@ -24,3 +24,9 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ${{ secrets.FTP_TARGET_FOLDER }}
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/README.md
+            **/Homeworks/**
+            **/[0-9]*_*/
