@@ -1,0 +1,29 @@
+name: 🚀 Deploy to Server (Hidden Config)
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  ftp-deploy:
+    name: 🛰 Upload via FTP (Secured)
+    runs-on: ubuntu-latest
+
+    steps:
+      # 📥 Получить содержимое репозитория
+      - name: 📦 Checkout Repository
+        uses: actions/checkout@v3
+
+      # 🚀 Отправить файлы на FTP-сервер
+      - name: 🧳 Deploy to FTP Server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+            server: ${{ secrets.FTP_SERVER }}
+            username: ${{ secrets.FTP_USERNAME }}
+            password: ${{ secrets.FTP_PASSWORD }}
+            server-dir: ${{ secrets.FTP_TARGET_FOLDER }}
+            passive: true
+            dangerous-clean-slate: true
+            exclude: "**/.git*,**/.github/**,**/README.md,**/Homeworks/**,**/[0-9]*_*/"
+  
