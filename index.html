@@ -17,8 +17,8 @@
     </div>
     <p><b>Tech Skills</b>: { HTML5, CSS3, JavaScript, TypeScript, React.js }</p>
     <p><b>Soft Skills</b>: { Teamwork, Communication, GTD, Agile }</p>
-    <h4 style="padding-top:25px;">It's about learning, understanding, and improving.</h4>
-    <p style="padding-top:10px;">
+    <h4 class="quote-line">It's about learning, understanding, and improving.</h4>
+    <p class="contact-line">
       <nobr>📞 +49 151 26 111 200</nobr>
       &nbsp;&nbsp;
       <nobr>📧 romyleads@gmail.com</nobr>
@@ -49,10 +49,11 @@
           <textarea id="message" rows="4" placeholder=" " required></textarea>
           <label for="message">Message</label>
         </div>
-        <div style="text-align: center; margin-top: 30px;">
-          <button type="submit" class="btn">
+        <div>
+          <button type="submit" class="btn" id="sendBtn">
             <span class="rocket-icon">🚀</span>Send
           </button>
+          <div id="spinner">⏳ Sending...</div>
         </div>
       </form>
 
