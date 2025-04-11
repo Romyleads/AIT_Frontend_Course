@@ -26,8 +26,12 @@ jobs:
           passive: true
           dangerous-clean-slate: true
           exclude: |
-            **/.git*
-            **/.github/**
-            **/README.md
-            **/Homeworks/**
-            [0-9][0-9]_*/**
+           **/.git*
+           **/.github/**
+           **/README.md
+           **/Homeworks/**
+           [0-9][0-9]_*/**
+           api/send.php
+           api/PHPMailer.php
+           api/SMTP.php
+           api/Exception.php
