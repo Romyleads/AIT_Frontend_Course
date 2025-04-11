@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: "Covered By Your Grace", cursive;
+  font-weight: 400; /* 100 - 900 */
+  font-style: normal;
+}
+
+header {
+    background-image: url("./images/Coffee.jpg");
+    height: 400px;
+    background-position: center; /* Сопоставление центра элемента с центром фонового изображения */
+    background-size: cover; /* выравнивание элемента и фоновой картинки по одной из осей (X или Y) */
+    /* background-repeat: no-repeat; */
+}
