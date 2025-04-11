@@ -174,10 +174,10 @@ input, textarea {
 form textarea {
   align-self: flex-start;
   height: 140px;             
-  padding-top: 10px;         
+  padding-top: 15px;         
   box-sizing: border-box;    
   vertical-align: top;   
-  margin-bottom: 20px;   
+ padding-bottom: 20px;   
 }
 label {
   position: absolute;
