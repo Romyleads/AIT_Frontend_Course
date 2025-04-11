@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roman Romashko {RR} FullStack Developer</title>
+  <link rel="icon" type="image/x-icon" href="/img/fav/favicon.ico" />
+  <link rel="stylesheet" href="./css/style-html.css" />
+  <script src="./script/script.js" defer></script>
+</head>
+<body>
+  <div class="card">
+    <h1>FullStack Developer 🚀 Roman Romashko</h1>
+    <p>I am a full-stack developer who loves building useful things • I'm learning every day and improving my skills</p>
+    <div class="profile-header">
+      <img src="./images/romyleads.png" alt="Photo of Roman Romashko" />
+      <button class="btn" id="openModal">Message me</button>
+    </div>
+    <p><b>Tech Skills</b>: { HTML5, CSS3, JavaScript, TypeScript, React.js }</p>
+    <p><b>Soft Skills</b>: { Teamwork, Communication, GTD, Agile }</p>
+    <h4 style="padding-top:25px;">It's about learning, understanding, and improving.</h4>
+    <p style="padding-top:10px;">
+      <nobr>📞 +49 151 26 111 200</nobr>
+      &nbsp;&nbsp;
+      <nobr>📧 romyleads@gmail.com</nobr>
+      &nbsp;&nbsp;
+      <nobr>🌐 <a href="https://github.com/romyleads">github.com/romyleads</a></nobr>
+    </p>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content" id="modalContent">
+      <button class="close-btn" id="closeModal"></button>
+      <h2>Message me</h2>
+      <br>
+      <form>
+        <div class="form-group">
+          <input id="name" type="text" placeholder=" " required />
+          <label for="name">Name</label>
+        </div>
+        <div class="form-group">
+          <input id="email" type="email" placeholder=" " required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address." />
+          <label for="email">Email</label>
+        </div>
+        <div class="form-group topic-field">
+  <label for="topic">Subject <span style="color: red">*</span></label>
+  <input type="text" id="topic" name="topic" autocomplete="off" />
+</div>
+        <div class="form-group">
+          <textarea id="message" rows="4" placeholder=" " required></textarea>
+          <label for="message">Message</label>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+          <button type="submit" class="btn">
+            <span class="rocket-icon">🚀</span>Send
+          </button>
+        </div>
+      </form>
+
+
+      <div id="form-success">Message sent successfully! 🚀</div>
+    </div>
+  </div>
+</body>
+</html>
