@@ -10,6 +10,7 @@ lib/
 Clone3/
 theory/
 api/
+**/beta/
 
 ### Eclipse ###
 .apt_generated

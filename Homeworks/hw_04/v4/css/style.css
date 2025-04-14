@@ -1,0 +1,199 @@
+      /* Импорт шрифтов */
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Caveat:wght@400;600&display=swap");
+
+      /* Сброс стилей */
+      *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgba(246, 241, 236, 0.9);
+        font-family: "Quicksand", sans-serif;
+        color: #3e2f20;
+        line-height: 1.3;
+        padding-bottom: 10px;
+      }
+
+      /* Универсальный класс для анимации появления */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.6s ease forwards;
+      }
+
+      /* Стили заголовка */
+      header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+        background-color: #e8e8e8;
+        overflow: hidden;
+        text-align: center;
+        animation-delay: 0s;
+      }
+      header::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("../images/Coffee-Table-Delight2.png") center center no-repeat;
+        background-size: cover;
+        z-index: 0;
+      }
+      header h1 {
+        position: relative;
+        z-index: 1;
+        font-family: "Caveat", sans-serif;
+        font-size: 52px;
+        color: #fff;
+        font-weight: 800;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+      }
+      @media (max-width: 600px) {
+        header h1 { font-size: 32px; }
+      }
+
+      /* Основной контейнер */
+      main {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Сетка новостей */
+      .news-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin: 40px 0 35px;
+      }
+
+      /* Карточки новостей */
+      .news-card {
+        background-color: #fff;
+        border-left: 8px dotted #a0522d;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        height: 200px;
+        transition: height 0.5s ease, padding 0.5s ease;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.6s ease forwards;
+      }
+      .news-card:nth-child(1) { animation-delay: 0.2s; }
+      .news-card:nth-child(2) { animation-delay: 0.4s; }
+      .news-card:nth-child(3) { animation-delay: 0.6s; }
+      .news-card:nth-child(4) { animation-delay: 0.8s; }
+      .news-card:nth-child(5) { animation-delay: 1s; }
+      .news-card:nth-child(6) { animation-delay: 1.2s; }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .news-card.expanded { height: 400px; }
+
+      .news-card h2 {
+        font-size: 26px;
+        margin: 10px 20px 12px;
+        color: #6d3b0a;
+        font-family: "Caveat", sans-serif;
+        font-weight: 800;
+      }
+
+      /* Зона текста карточки */
+      .text-zone {
+        overflow: hidden;
+        transition: max-height 0.6s ease;
+        margin: 0 20px;
+        position: relative;
+        max-height: 1000px;
+      }
+      .text-zone::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background: linear-gradient(to bottom, transparent, #fff);
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+        opacity: 0;
+      }
+      .news-card:not(.expanded) .text-zone { max-height: 120px; }
+      .news-card:not(.expanded) .text-zone::after { opacity: 1; }
+      .text-zone p {
+        font-size: 16px;
+        margin-bottom: 10px;
+        font-weight: 200;
+      }
+
+      /* Ссылочная зона карточки */
+      .link-zone { padding: 10px 20px 16px; }
+      .link-zone a {
+        color: #6d3b0a;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      .link-zone a:hover { color: #0f0803; }
+
+      /* Блок с изображением кофе */
+      .coffee-img-block {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: #fffdfc;
+        border: 1px solid #a0522d;
+        margin: 0;
+        padding: 12px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        animation-delay: 1.4s;
+      }
+      .coffee-img-block img {
+        height: 80px;
+        display: none;
+      }
+      .coffee-img-block p {
+        font-size: 16px;
+        padding-left: 10px;
+      }
+
+      /* Стили футера */
+      footer {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 15px;
+        color: #6d3b0a;
+        animation-delay: 1.6s;
+      }
+      em { color: #3e2f20; }
+
+      /* Иконки флагов */
+      .flag-icon {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 8px;
+        height: 11px;
+        width: 17px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      .flag-icon.br { background-image: url("https://flagcdn.com/w40/br.png"); }
+      .flag-icon.co { background-image: url("https://flagcdn.com/w40/co.png"); }
+      .flag-icon.in { background-image: url("https://flagcdn.com/w40/in.png"); }
+      .flag-icon.et { background-image: url("https://flagcdn.com/w40/et.png"); }
+      .flag-icon.cr { background-image: url("https://flagcdn.com/w40/cr.png"); }
+      .flag-icon.ke { background-image: url("https://flagcdn.com/w40/ke.png"); }

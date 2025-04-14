@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Coffee Origins</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&family=Playfair+Display:wght@500;700&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #E8E8E8;
+      font-family: "Roboto", sans-serif;
+      color: #3e2f20;
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      background-color: #fff;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("./images/Image20250411113248.png") center 25% no-repeat;
+      background-size: 960px auto;
+      opacity: 0.95;
+      z-index: 0;
+    }
+
+    header h1 {
+      position: relative;
+      z-index: 1;
+      font-family: "Arial", sans-serif;
+      font-size: 42px;
+      color: #fff;
+      text-align: center;
+      font-style: italic;
+      font-weight: bold;
+      margin: 0 56px 39px 0;
+    }
+
+    @media (max-width: 600px) {
+      header::before {
+        background: url("./images/Image20250411113248.png") center 20% no-repeat;
+        background-size: 120%;
+      }
+
+      header h1 {
+        font-size: 32px;
+        margin-bottom: 40px;
+      }
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .news-card {
+      background-color: #fff;
+      border-left: 5px solid #a0522d;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: height 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      height: 200px;
+    }
+
+    .news-card.expanded {
+      height: 420px;
+    }
+
+    .news-card h2 {
+      font-size: 22px;
+      margin: 20px 20px 12px;
+      color: #5a3d2b;
+    }
+
+    .text-zone {
+      max-height: 120px;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      margin: 0 20px;
+      position: relative;
+    }
+
+    .news-card.expanded .text-zone {
+      max-height: 1000px;
+    }
+
+    .text-zone::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: linear-gradient(to bottom, transparent, #fff);
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .news-card.expanded .text-zone::after {
+      opacity: 0;
+    }
+
+    .text-zone p {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .news-card a {
+      margin: 10px 20px 16px;
+      color: #8b4513;
+      font-weight: bold;
+      text-decoration: none;
+      z-index: 2;
+    }
+
+    .news-card a:hover {
+      text-decoration: underline;
+    }
+
+    .coffee-img-block {
+      display: flex;
+      align-items: center;
+      margin-top: 60px;
+      gap: 20px;
+      padding: 20px;
+      background-color: #fffdfc;
+      border-radius: 12px;
+      border-left: 6px solid #a0522d;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .coffee-img-block img {
+      width: 140px;
+      border-radius: 10px;
+    }
+
+    .coffee-img-block p {
+      font-size: 16px;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+    }
+
+    em {
+      color: #3e2f20;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Global Coffee Origins</h1>
+  </header>
+
+  <main>
+    <section class="news-grid">
+      <div class="news-card">
+        <h2>Brazil</h2>
+        <div class="text-zone">
+          <p>
+            Arabica dominates both Brazil and the world as a whole with about 85% of the production; robusta accounts for the remaining 30%. In Brazil, arabica production is located in the main coffee-growing cluster of states led by Rio where arabica is produced almost exclusively. Robusta is primarily grown in the northwestern much smaller state of Espirito Santo where about 80% of the coffee is robusta.
+          </p>
+        </div>
+        <a href="https://en.wikipedia.org/wiki/Brazil" target="_blank">☕ Read more</a>
+      </div>
+
+      <div class="news-card">
+        <h2>Colombia</h2>
+        <div class="text-zone">
+          <p>
+            Colombia has a reputation as producing mild, well balanced coffee beans. Colombia's average annual coffee production of 11.5 million bags is the third total highest in the world, after Brazil and Vietnam; though highest in terms of the arabica bean. The beans are exported to United States, Germany, France, Japan, and Italy. Most coffee is grown in the Colombian coffee growing axis region.
+          </p>
+        </div>
+        <a href="https://en.wikipedia.org/wiki/Colombia" target="_blank">☕ Read more</a>
+      </div>
+
+      <div class="news-card">
+        <h2>India</h2>
+        <div class="text-zone">
+          <p>
+            Indian coffee, grown mostly in southern India under monsoon rainfall conditions, is also termed as Indian monsooned coffee". Its flavor is defined as: "At its best similar to the flavor characteristics of Pacific coffees, but at its worst bland and uninspiring. The two well known species of coffee grown are the Arabica and Robusta. Probably the most commonly planted Arabica in India and Southeast Asia is S.795.
+          </p>
+        </div>
+        <a href="https://en.wikipedia.org/wiki/India" target="_blank">☕ Read more</a>
+      </div>
+
+      <div class="news-card">
+        <h2>Ethiopia</h2>
+        <div class="text-zone">
+          <p>
+            Ethiopian beans can be divided into 3 categories: Longberry, Shortberry, and Mocha. Longberry varieties consist of the largest beans and are often considered of the highest quality in both value and flavor. Shortberry varieties are smaller. The Mocha variety is a highly prized commodity. Mocha Harars are known for their peaberry beans that often have complex chocolate, spice and citrus notes.
+          </p>
+        </div>
+        <a href="https://en.wikipedia.org/wiki/Ethiopia" target="_blank">☕ Read more</a>
+      </div>
+
+      <div class="news-card">
+        <h2>Costa Rica</h2>
+        <div class="text-zone">
+          <p>
+            Costa Rican coffee beans are considered among the best in the world. Tarrazu is thought to produce the most desirable coffee beans in Costa Rica. In 2012, Tarrazu Geisha coffee became the most expensive coffee sold by Starbucks in 48 of their stores in the United States, using the Clover automated French press. The finest coffee is typically grown at altitudes of 1200 to 1700 meters.
+          </p>
+        </div>
+        <a href="https://en.wikipedia.org/wiki/Costa_Rica" target="_blank">☕ Read more</a>
+      </div>
+
+      <div class="news-card">
+        <h2>Kenya</h2>
+        <div class="text-zone">
+          <p>
+            The acidic soil in highlands of central Kenya, just the right amount of sunlight and rainfall provide excellent conditions for growing coffee plants. Coffee from Kenya is of the 'Colombia mild' type, and is well known for its intense flavor, full body, and pleasant aroma with notes of cocoa and high grade coffee from Kenya is one of the most sought-after coffees in the world.
+          </p>
+        </div>
+        <a href="https://en.wikipedia.org/wiki/Kenya" target="_blank">☕ Read more</a>
+      </div>
+    </section>
+
+    <div class="coffee-img-block">
+      <img src="./images/Image20250411113248.png" alt="Coffee cup" />
+      <p>
+        Coffee isn’t just a drink — it’s culture, tradition, and economy. Countries across the globe rely on this aromatic bean as part of their livelihood and global identity.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <em>© 2025 CoffeeZucker Inc. Ltd.</em>
+  </footer>
+
+  <script>
+    const cards = document.querySelectorAll('.news-card');
+
+    cards.forEach(card => {
+      const textZone = card.querySelector('.text-zone');
+
+      textZone.addEventListener('mouseenter', () => {
+        cards.forEach(c => c.classList.remove('expanded'));
+        card.classList.add('expanded');
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.classList.remove('expanded');
+      });
+    });
+  </script>
+</body>
+</html>
