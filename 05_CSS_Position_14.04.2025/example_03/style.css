@@ -1,0 +1,94 @@
+.section {
+    height: 100vh;
+}
+
+.red {
+    background-color: lightcoral;
+}
+.blue {
+    background-color: lightblue;
+}
+.orange {
+    background-color: orange;
+}
+.pink {
+    background-color: pink;
+}
+
+.card-1 {
+    background-color: white;
+    width: 300px;
+    height: 450px;
+    border-radius: 18px;
+    margin: 20px;
+    position: sticky;
+    top: 25vh;
+}
+
+.card-2 {
+    background-color: white;
+    width: 300px;
+    height: 450px;
+    border-radius: 18px;
+    margin: 20px;
+    position: sticky;
+    top: 25vh;
+    left: 30vw;
+}
+.card-3 {
+    background-color: white;
+    width: 300px;
+    height: 450px;
+    border-radius: 18px;
+    margin: 20px;
+    position: sticky;
+    top: 25vh;
+    left: 60vw;
+}
+
+
+
+.wrapper-block{
+    height: 300vh;
+}
+.middle-block{
+    height: 200vh;
+}
+.inner-block{
+    height: 100vh;
+}
+
+
+.absolute-block {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+
+    width: 300px;
+    height: 450px;
+
+    background-color: grey;
+    
+}
+
+.wrapper {
+    position: relative;
+}
+
+.red-block {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    background-color: red;
+    width: 30px;
+    height: 30px;
+}
+
+.block-background-img{
+    border: 2px solid red;
+    width: 600px;
+    height: 600px;
+    background-color: black;
+    background: url("./pictures/cat.jpg") no-repeat right/contain;
+}
