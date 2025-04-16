@@ -1,0 +1,29 @@
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.nav-items-container {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+section {
+    width: 50%;
+}
+
+.left-nav-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 24px;
+
+}
