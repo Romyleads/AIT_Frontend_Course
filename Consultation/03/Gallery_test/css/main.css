@@ -15,7 +15,7 @@
 
 
  .photo{
-    width:calc(50% - 40px);
+    width:calc(33% - 40px);
     /* width: calc(50% - 40px);
     50%: Это 50% ширины родительского элемента.
     - 40px: Это вычитание 40 пикселей из значения 50%.
@@ -49,6 +49,7 @@
     width: 100%;
     font-size: 48px;
  }
+
 
  .photo:hover{
     transform: scale(1.7) ;

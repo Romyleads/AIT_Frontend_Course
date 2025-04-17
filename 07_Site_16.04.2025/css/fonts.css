@@ -1,0 +1,66 @@
+/* GENTONA MEDIUM */
+@font-face {
+    font-family: 'Gentona';
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url('Gentona-Medium.woff2') format('woff2'),
+         url('Gentona-Medium.woff') format('woff'),
+         url('Gentona-Medium.ttf') format('truetype');
+  }
+  
+  /* GENTONA MEDIUM ITALIC */
+  @font-face {
+    font-family: 'Gentona';
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+    src: url('Gentona-MediumItalic.woff2') format('woff2'),
+         url('Gentona-MediumItalic.woff') format('woff'),
+         url('Gentona-MediumItalic.ttf') format('truetype');
+  }
+  
+  /* GENTONA SEMIBOLD */
+  @font-face {
+    font-family: 'Gentona';
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url('Gentona-SemiBold.woff2') format('woff2'),
+         url('Gentona-SemiBold.woff') format('woff'),
+         url('Gentona-SemiBold.ttf') format('truetype');
+  }
+  
+  /* GENTONA SEMIBOLD ITALIC */
+  @font-face {
+    font-family: 'Gentona';
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+    src: url('Gentona-SemiBoldItalic.woff2') format('woff2'),
+         url('Gentona-SemiBoldItalic.woff') format('woff'),
+         url('Gentona-SemiBoldItalic.ttf') format('truetype');
+  }
+  
+  /* GENTONA BOLD */
+  @font-face {
+    font-family: 'Gentona';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('Gentona-Bold.woff2') format('woff2'),
+         url('Gentona-Bold.woff') format('woff'),
+         url('Gentona-Bold.ttf') format('truetype');
+  }
+  
+  /* GENTONA BOLD ITALIC */
+  @font-face {
+    font-family: 'Gentona';
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+    src: url('Gentona-BoldItalic.woff2') format('woff2'),
+         url('Gentona-BoldItalic.woff') format('woff'),
+         url('Gentona-BoldItalic.ttf') format('truetype');
+  }
+  
