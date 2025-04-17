@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Типы данных и свойства DOM</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 30px;
+      background: #f9f9f9;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px 10px 10px 0;
+      cursor: pointer;
+    }
+    pre {
+      margin-top: 20px;
+      background: #222;
+      color: #0f0;
+      padding: 20px;
+      border-radius: 8px;
+      max-height: 500px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📦 Типы данных и свойства DOM в JavaScript</h1>
+
+  <button onclick="showTypes()">Показать типы данных</button>
+  <button onclick="showDOMProperties()">Показать свойства DOM</button>
+
+  <pre id="output1">// Результат типов данных появится здесь</pre>
+  <pre id="output2">// Свойства DOM-элемента появятся здесь</pre>
+
+  <script>
+    function showTypes() {
+      const str = "Привет";
+      const num = 42;
+      const big = 12345678901234567890n;
+      const bool = true;
+      const undef = undefined;
+      const nul = null;
+      const sym = Symbol("уникальный");
+
+      const obj = { name: "Alice" };
+      const arr = [1, 2, 3];
+      const func = function () { return "Hi"; };
+      const arrow = () => "Hello";
+      const date = new Date();
+      const regexp = /abc/;
+      const map = new Map();
+      const set = new Set();
+      const weakMap = new WeakMap();
+      const weakSet = new WeakSet();
+      const error = new Error("Ошибка!");
+      const promise = Promise.resolve("Готово");
+      const buffer = new ArrayBuffer(8);
+      const typed = new Uint8Array([1, 2, 3]);
+
+      const variables = {
+        str, num, big, bool, undef, nul, sym,
+        obj, arr, func, arrow, date, regexp,
+        map, set, weakMap, weakSet, error,
+        promise, buffer, typed
+      };
+
+      const descriptions = {
+        str: "строка (текст)",
+        num: "число",
+        big: "большое число (BigInt)",
+        bool: "логическое значение",
+        undef: "не определено (undefined)",
+        nul: "пусто (null)",
+        sym: "уникальный идентификатор (Symbol)",
+        obj: "объект (ключи и значения)",
+        arr: "массив (список)",
+        func: "функция",
+        arrow: "стрелочная функция",
+        date: "дата и время",
+        regexp: "шаблон поиска (RegExp)",
+        map: "коллекция пар ключ-значение (Map)",
+        set: "уникальные значения (Set)",
+        weakMap: "слабые ссылки Map",
+        weakSet: "слабые ссылки Set",
+        error: "ошибка (Error)",
+        promise: "обещание результата (Promise)",
+        buffer: "бинарная память (ArrayBuffer)",
+        typed: "типизированный массив байтов"
+      };
+
+      let output = "Имя          | typeof       | constructor       | Описание\n";
+      output += "--------------------------------------------------------------------\n";
+
+      for (const [name, value] of Object.entries(variables)) {
+        const type = typeof value;
+        const constructor = value !== null && value !== undefined
+          ? value.constructor?.name || "—"
+          : "—";
+        const desc = descriptions[name] || "—";
+
+        output += `${name.padEnd(12)} | ${type.padEnd(12)} | ${constructor.padEnd(16)} | ${desc}\n`;
+      }
+
+      document.getElementById("output1").textContent = output;
+    }
+
+    function showDOMProperties() {
+      const element = document.createElement('div');
+      let output = "🔍 Свойства DOM-элемента <div>:\n\n";
+
+      const props = [
+        "id", "className", "classList", "tagName", "innerText",
+        "innerHTML", "outerHTML", "textContent", "children", "childNodes",
+        "firstChild", "lastChild", "parentNode", "nextSibling", "previousSibling",
+        "style", "attributes", "dataset", "clientHeight", "clientWidth",
+        "offsetHeight", "offsetWidth", "scrollHeight", "scrollTop", "hasChildNodes",
+        "getAttribute()", "setAttribute()", "removeAttribute()", "append()", "prepend()",
+        "insertAdjacentHTML()", "addEventListener()", "remove()", "cloneNode()"
+      ];
+
+      props.forEach(p => {
+        output += `• ${p}\n`;
+      });
+
+      document.getElementById("output2").textContent = output;
+    }
+  </script>
+
+</body>
+</html>

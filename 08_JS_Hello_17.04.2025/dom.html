@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM-свойства и методы + Типы JS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1e1e1e;
+      color: #eee;
+      padding: 20px;
+    }
+    h2 {
+      color: #90ee90;
+      margin-top: 40px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #555;
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #333;
+    }
+    tr:nth-child(even) {
+      background-color: #2a2a2a;
+    }
+    code {
+      color: #7fffd4;
+    }
+  </style>
+</head>
+<body>
+  <h2>📋 Свойства и методы DOM-элемента &lt;div&gt;</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Свойство / Метод</th>
+        <th>Описание</th>
+        <th>Пример</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><code>scrollTop</code></td><td>прокрутка вверх/вниз</td><td><code>el.scrollTop = 100</code></td></tr>
+      <tr><td><code>scrollLeft</code></td><td>прокрутка влево/вправо</td><td><code>el.scrollLeft = 50</code></td></tr>
+      <tr><td><code>offsetTop</code></td><td>расстояние от верхнего края родителя</td><td><code>el.offsetTop</code></td></tr>
+      <tr><td><code>offsetLeft</code></td><td>расстояние от левого края родителя</td><td><code>el.offsetLeft</code></td></tr>
+      <tr><td><code>nextElementSibling</code></td><td>следующий элемент-сосед</td><td><code>el.nextElementSibling</code></td></tr>
+      <tr><td><code>previousElementSibling</code></td><td>предыдущий элемент-сосед</td><td><code>el.previousElementSibling</code></td></tr>
+      <tr><td><code>closest()</code></td><td>ближайший родитель по селектору</td><td><code>el.closest(".container")</code></td></tr>
+      <tr><td><code>matches()</code></td><td>соответствие селектору</td><td><code>el.matches(".active")</code></td></tr>
+      <tr><td><code>cloneNode()</code></td><td>клонирует узел</td><td><code>el.cloneNode(true)</code></td></tr>
+      <tr><td><code>contains()</code></td><td>проверка, содержит ли узел</td><td><code>el.contains(child)</code></td></tr>
+    </tbody>
+  </table>
+
+  <h2>📦 Примитивные и ссылочные типы в JavaScript</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Тип</th>
+        <th>Пример</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><code>string</code></td><td><code>"Привет"</code></td><td>строка</td></tr>
+      <tr><td><code>number</code></td><td><code>42</code></td><td>число, включая Infinity и NaN</td></tr>
+      <tr><td><code>bigint</code></td><td><code>12345678901234567890n</code></td><td>большое целое число</td></tr>
+      <tr><td><code>boolean</code></td><td><code>true</code></td><td>логическое значение</td></tr>
+      <tr><td><code>undefined</code></td><td><code>let a;</code></td><td>переменная не инициализирована</td></tr>
+      <tr><td><code>null</code></td><td><code>null</code></td><td>намеренно пустое значение</td></tr>
+      <tr><td><code>symbol</code></td><td><code>Symbol("id")</code></td><td>уникальное значение</td></tr>
+
+      <tr><td><code>object</code></td><td><code>{ name: "Alice" }</code></td><td>объект с ключами</td></tr>
+      <tr><td><code>array</code></td><td><code>[1, 2, 3]</code></td><td>массив</td></tr>
+      <tr><td><code>function</code></td><td><code>function() {}</code></td><td>функция</td></tr>
+      <tr><td><code>date</code></td><td><code>new Date()</code></td><td>объект даты и времени</td></tr>
+      <tr><td><code>regexp</code></td><td><code>/abc/</code></td><td>регулярное выражение</td></tr>
+      <tr><td><code>map</code></td><td><code>new Map()</code></td><td>коллекция пар ключ-значение</td></tr>
+      <tr><td><code>set</code></td><td><code>new Set()</code></td><td>множество уникальных значений</td></tr>
+      <tr><td><code>promise</code></td><td><code>Promise.resolve()</code></td><td>обещание (асинх. результат)</td></tr>
+    </tbody>
+  </table>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM-свойства и методы</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1e1e1e;
+      color: #eee;
+      padding: 20px;
+    }
+    h2 {
+      color: #90ee90;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #555;
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #333;
+    }
+    tr:nth-child(even) {
+      background-color: #2a2a2a;
+    }
+    code {
+      color: #7fffd4;
+    }
+  </style>
+</head>
+<body>
+  <h2>📋 Свойства и методы DOM-элемента &lt;div&gt;</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Свойство / Метод</th>
+        <th>Описание</th>
+        <th>Пример</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><code>id</code></td><td>id элемента</td><td><code>el.id = "main"</code></td></tr>
+      <tr><td><code>className</code></td><td>строка классов</td><td><code>el.className = "box red"</code></td></tr>
+      <tr><td><code>classList</code></td><td>удобное управление классами</td><td><code>el.classList.add("active")</code></td></tr>
+      <tr><td><code>tagName</code></td><td>имя тега</td><td><code>el.tagName // "DIV"</code></td></tr>
+      <tr><td><code>innerText</code></td><td>только текст (без HTML)</td><td><code>el.innerText = "Привет"</code></td></tr>
+      <tr><td><code>innerHTML</code></td><td>HTML внутри</td><td><code>el.innerHTML = "&lt;b&gt;текст&lt;/b&gt;"</code></td></tr>
+      <tr><td><code>outerHTML</code></td><td>весь HTML элемента</td><td><code>console.log(el.outerHTML)</code></td></tr>
+      <tr><td><code>textContent</code></td><td>весь текст, даже скрытый</td><td><code>el.textContent</code></td></tr>
+      <tr><td><code>children</code></td><td>дочерние элементы</td><td><code>el.children[0]</code></td></tr>
+      <tr><td><code>childNodes</code></td><td>все дочерние узлы</td><td><code>el.childNodes</code></td></tr>
+      <tr><td><code>firstChild</code></td><td>первый узел</td><td><code>el.firstChild</code></td></tr>
+      <tr><td><code>lastChild</code></td><td>последний узел</td><td><code>el.lastChild</code></td></tr>
+      <tr><td><code>parentNode</code></td><td>родительский узел</td><td><code>el.parentNode</code></td></tr>
+      <tr><td><code>nextSibling</code></td><td>следующий сосед</td><td><code>el.nextSibling</code></td></tr>
+      <tr><td><code>previousSibling</code></td><td>предыдущий сосед</td><td><code>el.previousSibling</code></td></tr>
+      <tr><td><code>style</code></td><td>CSS-стили</td><td><code>el.style.color = "red"</code></td></tr>
+      <tr><td><code>attributes</code></td><td>все атрибуты</td><td><code>el.attributes</code></td></tr>
+      <tr><td><code>dataset</code></td><td>data-* атрибуты</td><td><code>el.dataset.user</code></td></tr>
+      <tr><td><code>clientWidth</code></td><td>ширина содержимого</td><td><code>el.clientWidth</code></td></tr>
+      <tr><td><code>offsetHeight</code></td><td>высота с границами</td><td><code>el.offsetHeight</code></td></tr>
+      <tr><td><code>scrollHeight</code></td><td>высота с прокруткой</td><td><code>el.scrollHeight</code></td></tr>
+      <tr><td><code>hasChildNodes()</code></td><td>есть ли дети</td><td><code>el.hasChildNodes()</code></td></tr>
+      <tr><td><code>getAttribute()</code></td><td>получить атрибут</td><td><code>el.getAttribute("href")</code></td></tr>
+      <tr><td><code>setAttribute()</code></td><td>установить атрибут</td><td><code>el.setAttribute("id", "box")</code></td></tr>
+      <tr><td><code>removeAttribute()</code></td><td>удалить атрибут</td><td><code>el.removeAttribute("id")</code></td></tr>
+      <tr><td><code>append()</code></td><td>добавить внутрь</td><td><code>el.append(child)</code></td></tr>
+      <tr><td><code>prepend()</code></td><td>добавить в начало</td><td><code>el.prepend(child)</code></td></tr>
+      <tr><td><code>insertAdjacentHTML()</code></td><td>вставка HTML</td><td><code>el.insertAdjacentHTML('beforeend', "&lt;p&gt;Text&lt;/p&gt;")</code></td></tr>
+      <tr><td><code>addEventListener()</code></td><td>обработчик события</td><td><code>el.addEventListener("click", fn)</code></td></tr>
+      <tr><td><code>remove()</code></td><td>удалить элемент</td><td><code>el.remove()</code></td></tr>
+    </tbody>
+  </table>
+</body>
+</html>

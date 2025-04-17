@@ -1,0 +1,99 @@
+<h3 style="margin-top:30px; font-family:sans-serif;">🔄 Java → JavaScript: соответствие типов данных</h3>
+
+<style>
+  .js-compare {
+    width: 100%;
+    font-size: 13px;
+    font-family: sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+  }
+
+  .js-compare th,
+  .js-compare td {
+    padding: 5px 8px 3px 20px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  .js-compare thead {
+    background: #f5f5f5;
+  }
+
+  .js-compare tr:nth-child(even):not(.section-header) {
+    background: #f9f9f9;
+  }
+
+  .section-header td {
+    background: #e7fbe7;
+    font-weight: bold;
+    padding: 8px 20px;
+    border: none;
+  }
+
+  .pink { background: #fff0f3; }
+  .yellow { background: #fffce6; }
+  .green { background: #f0fff4; }
+</style>
+
+<table class="js-compare">
+  <thead>
+    <tr>
+      <th>Java</th>
+      <th>JavaScript</th>
+      <th>⭑ Уровень</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="section-header"><td colspan="3">🔹 Примитивы</td></tr>
+    <tr class="green"><td>String</td><td>string</td><td>⭑⭑⭑⭑⭑</td></tr>
+    <tr class="yellow"><td>char</td><td>string (1 символ)</td><td>⭑⭑</td></tr>
+    <tr class="yellow"><td>byte</td><td>number</td><td>⭑⭑⭑</td></tr>
+    <tr class="yellow"><td>short</td><td>number</td><td>⭑⭑⭑</td></tr>
+    <tr class="yellow"><td>int</td><td>number</td><td>⭑⭑⭑</td></tr>
+    <tr class="yellow"><td>long</td><td>bigint</td><td>⭑⭑⭑</td></tr>
+    <tr class="yellow"><td>float</td><td>number</td><td>⭑⭑⭑</td></tr>
+    <tr class="yellow"><td>double</td><td>number</td><td>⭑⭑⭑</td></tr>
+    <tr class="green"><td>boolean</td><td>boolean</td><td>⭑⭑⭑⭑⭑</td></tr>
+
+    <tr class="section-header"><td colspan="3">🔹 Обёртки</td></tr>
+    <tr class="green"><td>Byte</td><td>number</td><td>⭑⭑⭑</td></tr>
+    <tr class="green"><td>Short</td><td>number</td><td>⭑⭑⭑</td></tr>
+    <tr class="green"><td>Integer</td><td>number</td><td>⭑⭑⭑</td></tr>
+    <tr class="green"><td>Long</td><td>bigint</td><td>⭑⭑⭑</td></tr>
+    <tr class="green"><td>Float</td><td>number</td><td>⭑⭑⭑</td></tr>
+    <tr class="green"><td>Double</td><td>number</td><td>⭑⭑⭑</td></tr>
+    <tr class="green"><td>Boolean</td><td>boolean</td><td>⭑⭑⭑⭑⭑</td></tr>
+    <tr class="green"><td>Character</td><td>string</td><td>⭑⭑</td></tr>
+
+    <tr class="section-header"><td colspan="3">🔹 Объекты и коллекции</td></tr>
+    <tr class="green"><td>String[]</td><td>Array</td><td>⭑⭑⭑⭑</td></tr>
+    <tr class="green"><td>Object</td><td>object</td><td>⭑⭑⭑⭑</td></tr>
+    <tr class="green"><td>ArrayList</td><td>Array</td><td>⭑⭑⭑⭑</td></tr>
+    <tr class="green"><td>HashMap</td><td>Map</td><td>⭑⭑⭑⭑⭑</td></tr>
+    <tr class="green"><td>HashSet</td><td>Set</td><td>⭑⭑⭑⭑⭑</td></tr>
+    <tr class="green"><td>LinkedList</td><td>Array</td><td>⭑⭑⭑</td></tr>
+
+    <tr class="section-header"><td colspan="3">🔹 Даты и RegExp</td></tr>
+    <tr class="yellow"><td>LocalDate</td><td>Date</td><td>⭑⭑⭑</td></tr>
+    <tr class="yellow"><td>Calendar</td><td>Date</td><td>⭑⭑</td></tr>
+    <tr class="green"><td>Pattern</td><td>RegExp</td><td>⭑⭑⭑⭑</td></tr>
+
+    <tr class="section-header"><td colspan="3">🔹 Ошибки</td></tr>
+    <tr class="yellow"><td>Exception</td><td>Error</td><td>⭑⭑⭑</td></tr>
+    <tr class="yellow"><td>Throwable</td><td>Error</td><td>⭑⭑</td></tr>
+
+    <tr class="section-header"><td colspan="3">🔹 Асинхронность</td></tr>
+    <tr class="yellow"><td>Runnable</td><td>function</td><td>⭑⭑⭑</td></tr>
+    <tr class="green"><td>CompletableFuture</td><td>Promise</td><td>⭑⭑⭑⭑</td></tr>
+
+    <tr class="section-header"><td colspan="3">🔹 Бинарные</td></tr>
+    <tr class="green"><td>byte[]</td><td>TypedArray</td><td>⭑⭑⭑⭑</td></tr>
+    <tr class="green"><td>ByteBuffer</td><td>ArrayBuffer</td><td>⭑⭑⭑⭑</td></tr>
+
+    <tr class="section-header"><td colspan="3">🔹 Структура</td></tr>
+    <tr class="yellow"><td>class</td><td>object + prototype</td><td>⭑⭑</td></tr>
+    <tr class="pink"><td>interface</td><td>—</td><td>⭑</td></tr>
+    <tr class="pink"><td>enum</td><td>—</td><td>⭑</td></tr>
+  </tbody>
+</table>
