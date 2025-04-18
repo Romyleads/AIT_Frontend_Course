@@ -9,7 +9,7 @@ let sunOfMotherFriend = 100;
 if(myUnderstandingLevel){
     console.log("You\'re smarty pants");
 }
+
 if(sunOfMotherFriend){
     console.log("He is smarty pants");
 }
-console.log(clear);

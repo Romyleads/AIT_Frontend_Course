@@ -1,0 +1,96 @@
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; font-size: 15px;">
+  <thead>
+    <tr style="background:#f0f0f0;">
+      <th>Категория</th>
+      <th>Java</th>
+      <th>JavaScript</th>
+      <th>Сходства</th>
+      <th>Различия</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="8"><b>Примитивные<br>типы</b></td>
+      <td>byte, short, int, long</td>
+      <td rowspan="2">number</td>
+      <td rowspan="8">Обе имеют числовые, логические, символьные типы, null/undefined-значения</td>
+      <td>В Java есть разделение на целые типы; в JS – все числа (целые и дробные) — один тип</td>
+    </tr>
+    <tr>
+      <td>float, double</td>
+      <td>В Java есть типы для чисел с плавающей точкой; в JS — number и с 2020 года BigInt</td>
+    </tr>
+    <tr>
+      <td>char</td>
+      <td>string (все строки, символа отдельного нет)</td>
+      <td>В Java char — отдельный тип, в JS строки (string) для всего</td>
+    </tr>
+    <tr>
+      <td>boolean</td>
+      <td>boolean</td>
+      <td>Тип совпадает; значения: true/false</td>
+    </tr>
+    <tr>
+      <td>void</td>
+      <td>undefined</td>
+      <td>Используются как 'пустой' тип результата, но в Java — только для методов, в JS — тип значения</td>
+    </tr>
+    <tr>
+      <td>null</td>
+      <td>null, undefined</td>
+      <td>В JavaScript есть и null, и undefined; в Java — только null как значение отсутствия объекта</td>
+    </tr>
+    <tr>
+      <td>BigInteger,<br>BigDecimal</td>
+      <td>BigInt</td>
+      <td>Для работы с очень большими числами: в Java BigInteger/BigDecimal, в JS — BigInt</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>symbol</td>
+      <td>symbol — только в JS, уникальные идентификаторы</td>
+    </tr>
+
+    <tr>
+      <td rowspan="3"><b>Обёртки<br>(Wrapper-тип)</b></td>
+      <td>Integer, Double, Float, Boolean, Character, Long, Short, Byte</td>
+      <td>Number, Boolean, String, Symbol, BigInt</td>
+      <td>Обеспечивают объектную оболочку для примитивов</td>
+      <td>В Java больше классов-обёрток по отдельности на каждый тип. В JS — единые классы для number/boolean/string</td>
+    </tr>
+    <tr>
+      <td>String (immutable)</td>
+      <td>String (immutable)</td>
+      <td>Строки — неизменяемые объекты</td>
+      <td>В Java — отдельный класс, в JS — встроенный тип, тоже неизменяем</td>
+    </tr>
+    <tr>
+      <td>—</td>
+      <td>Object (обёртка для любого примитива)</td>
+      <td>В JS можно обернуть любой примитив в объект вручную</td>
+      <td>В Java такого механизма нет</td>
+    </tr>
+
+    <tr>
+      <td rowspan="2"><b>Коллекции</b></td>
+      <td>Array, ArrayList, LinkedList, HashSet, TreeSet, HashMap, TreeMap, Queue, Stack и др.</td>
+      <td>Array, Set, Map, WeakSet, WeakMap, Object</td>
+      <td>Есть массивы и коллекции</td>
+      <td>В Java строго типизированные generics-коллекции, в JS — динамическая типизация; коллекции появились позже и чаще всего используются массивы и объекты</td>
+    </tr>
+    <tr>
+      <td>Enum (enum MyEnum {A,B,C})</td>
+      <td>Нет явного enum, только имитация объектом или типа symbol</td>
+      <td>Можно перечислять фиксированный набор значений</td>
+      <td>В Java enum — отдельная категория, в JS — только эмуляция</td>
+    </tr>
+
+    <tr>
+      <td><b>Объекты</b></td>
+      <td>Любой объект класса</td>
+      <td>Object, функция как объект, класс как функция</td>
+      <td>Всё можно представить в виде объектов (ООП)</td>
+      <td>В JS прототипное наследование и всё — объекты, в Java пример — классическое ООП</td>
+    </tr>
+  </tbody>
+</table>
