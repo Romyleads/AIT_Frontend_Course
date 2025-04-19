@@ -30,3 +30,13 @@ console.log({ str  });
 
 console.log("var cats: "+cats);
 console.log("var str: "+str);
+
+const user ={
+name: "Anna"
+
+};
+console.clear();
+console.log(user.name);
+
+console.clear();
+process.stdout.write('\x1Bc');
