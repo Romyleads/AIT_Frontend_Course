@@ -15,9 +15,9 @@ const temperature = 18;
 
 if (temperature < 0) {
 	console.log('Холодно!');
-} else if (temperature >= 0 && temperature <= 20) {
+} else if (temperature <= 20) {
 	console.log('Прохладно');
-} else if (temperature >= 21 && temperature <= 30) {
+} else if (temperature <= 30) {
 	console.log('Тепло');
 } else {
 	console.log('Жарко!');
