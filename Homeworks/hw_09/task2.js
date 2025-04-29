@@ -34,10 +34,11 @@ function getWeatherDescription(code) {
 		case 'SS':
 			return 'Песчаная буря (видимость менее 10 км)';
 
-		//если непонятно что
+		// если непонятно что
 		default:
 			return 'Неизвестный код погоды';
 	}
 }
 
 console.log(getWeatherDescription('SQ')); // Шквал
+console.log(getWeatherDescription('ЦЦ')); // Пыльный вихрь
