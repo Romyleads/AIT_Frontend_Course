@@ -41,4 +41,4 @@ function getWeatherDescription(code) {
 }
 
 console.log(getWeatherDescription('SQ')); // Шквал
-console.log(getWeatherDescription('ЦЦ')); // Пыльный вихрь
+console.log(getWeatherDescription('ЦЦ')); // Неизвестный код погоды
