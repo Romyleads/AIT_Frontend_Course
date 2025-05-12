@@ -1,4 +1,5 @@
 // find the first button by ID
+//const btn = document.querySelector('#magic-btn');
 const btn = document.getElementById("magic-btn");
 
 // clone the button and set its properties
