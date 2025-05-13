@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Add Animal to the List</title>
+		<script src="./js/index.js" defer></script>
+		<link rel="stylesheet" href="./css/index.css" />
+	</head>
+	<body>
+		<form id="add-animal-form" class="add-animal-form">
+			<label for="nickname-input">Nickname:</label>
+			<input type="text" name="nickname" id="nickname-input" />
+
+			<label for="age-input">Age:</label>
+			<input type="text" name="age" id="age-input" />
+
+			<label for="breed-input">Breed:</label>
+			<input type="text" name="breed" id="breed-input" />
+
+			<button type="submit" class="add-btn">Add</button>
+			<button id="clear-btn" type="button" class="clear-btn">Clear</button>
+		</form>
+
+		<ul id="animals-list" style="margin-top: 20px" class="animals-container"></ul>
+	</body>
+</html>
