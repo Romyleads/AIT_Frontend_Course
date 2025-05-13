@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM II</title>
+<script src="./js/index.js" defer></script>
+</head>
+<body>
+<div style="display: flex; justify-content:center; align-items:center; flex-direction:row;">
+
+
+<form id="student-form">
+<span id="email-error" style="color: red; margin-top: 10px"></span>
+
+
+<label for="email">Email</label>
+<input type="text" name="name" id="email"></input>
+
+<label for="german">Level of German</label>
+<input type="text" name="german" id="german"></input>
+
+
+<button type="submit">Add student to list</button> 
+<button id="remove-all-students" type="button">Remove All</button>
+<button id="sort-students-btn" type="button">Sort by level of German</button>
+
+
+  </form>
+ <form id="filter-form" style="margin-left: 20px;">
+  <label for="german">Filter by level of German</label>
+  <select name="german" id="german
+<select name="german">
+  <option value="A1">A1</option>
+  <option value="A2">A2</option>
+  <option value="B1">B1</option>
+  <option value="B2">B2</option>
+  <option value="C1">C1</option>
+  <option value="C2">C2</option>
+</select>
+
+</form>
+
+
+</div>
+
+
+<!-- Контейнер для студентов-->
+<div id="students-container" style="text-align: center;padding-top: 15px;"></div>
+
+
+
+</body>
+</html>
