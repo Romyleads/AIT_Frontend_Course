@@ -7,7 +7,7 @@ const breedInput=form.elements["breed"]; // получаем элемент bree
 
 const animalsContainer=document.getElementById("animals-container"); 
 const removeBtn=document.getElementById("remove-all-animals"); // получаем элемент removeBtn для удаления всех animals
-const animalError=document.getElementById("animal-error"); // получаем элемент emailError для вывода ошибки
+const animalError=document.getElementById("animal-error"); // получаем элемент animal-error для вывода ошибки
 const sortBtn=document.getElementById("sort-animals-btn"); //remove all animals
 const filterForm=document.getElementById("filter-form"); // получаем элемент filterForm 
 const filterParamsInput=filterForm.elements["age"]; // получаем элемент age из filterForm
@@ -15,9 +15,11 @@ const filterParamsInput=filterForm.elements["age"]; // получаем элем
 
 // начальный массив животных
 let animals = [
-{name: "Tuzik", age: "2", breed:"dog"},
-{name:"Myau", age: "1", breed:"cat"},
-]; 
+  { name: "Tuzik", age: "2", breed: "Dog" },
+  { name: "Myau", age: "1", breed: "Cat" },
+  { name: "Murka", age: "4", breed: "Persian Cat" },
+  { name: "Rex", age: "5", breed: "Dog" }
+];
 
 // Выводим животных в контейнер, добавляем пару элементов
 
@@ -80,7 +82,7 @@ animalError.innerText="";
 animalsContainer.innerHTML=""; // очищаем контейнер animalsContainer
 }
 else {
-animalError.innerText="Inputs values are not valid \n"; // выводим ошибку в контейнер emailError
+animalError.innerText="Please fill in all fields correctly! \n"; // выводим ошибку 
 }
 
 
@@ -123,11 +125,17 @@ renderAnimals(animals) // запускаем генерацию списка ж�
 // фильтрует животных по age и обновляем отображение
 function filteredAnimals(event){
 event.preventDefault(); // отмена отправки формы
-const filtered = animals.filter(
+let filtered;
 
-(animal) => animal.age === filterParamsInput.value
+ if (filterParamsInput.value !== "All") {
+filtered = animals.filter(
+
+(animal) => animal.age.toString() === filterParamsInput.value
 
 );
+} else {
+    filtered = animals; // если выбрано "All", показываем всех
+  }
 renderAnimals(filtered); // запускаем генерацию списка животных
 
 }

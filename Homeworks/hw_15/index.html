@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DOM II HOMEWORK 15</title>
+  <title>Add Animal to the List</title>
 <script src="./js/index.js" defer></script>
+<link rel="stylesheet" href="./css/index.css" />
+
 </head>
 <body>
-<div style="display: flex; justify-content:center; align-items:center; flex-direction:row;">
 
+<h1>Add a New Animal to the List</h1>
 
+<div class="form-container">
 <form id="animals-form">
-<span id="animal-error" style="color: red; margin-top: 10px"></span>
+<span id="animal-error"></span>
 
 
 <label for="name">Nickname</label>
@@ -31,10 +34,10 @@
 
 
   </form>
- <form id="filter-form" style="margin-left: 20px;">
+ <form id="filter-form">
   <label for="age">Filter by Age</label>
   <select name="age" id="age">
-
+  <option value="All">All</option>
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
@@ -50,7 +53,7 @@
 
 
 <!-- Контейнер для животных-->
-<div id="animals-container" style="text-align: center;padding-top: 15px;"></div>
+<div id="animals-container"></div>
 
 
 
