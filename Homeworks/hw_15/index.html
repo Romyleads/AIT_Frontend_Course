@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM II HOMEWORK 15</title>
+<script src="./js/index.js" defer></script>
+</head>
+<body>
+<div style="display: flex; justify-content:center; align-items:center; flex-direction:row;">
+
+
+<form id="animals-form">
+<span id="animal-error" style="color: red; margin-top: 10px"></span>
+
+
+<label for="name">Nickname</label>
+<input type="text" name="name" id="name"></input>
+
+<label for="age">Age</label>
+<input type="number" name="age" id="age"></input>
+
+
+<label for="breed">Breed</label>
+<input type="text" name="breed" id="breed"></input>
+
+
+<button type="submit">Add animal to list</button>
+<button id="remove-all-animals" type="button">Remove All</button>
+<button id="sort-animals-btn" type="button">Sort by Name</button>
+
+
+  </form>
+ <form id="filter-form" style="margin-left: 20px;">
+  <label for="age">Filter by Age</label>
+  <select name="age" id="age">
+
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+</select>
+
+</form>
+
+
+</div>
+
+
+<!-- Контейнер для животных-->
+<div id="animals-container" style="text-align: center;padding-top: 15px;"></div>
+
+
+
+</body>
+</html>
