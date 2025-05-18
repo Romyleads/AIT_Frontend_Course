@@ -14,29 +14,31 @@ const container = document.querySelector(".container");
 
 fetch("https://api.sampleapis.com/wines/whites")
 .then(res=> res.json())
-.then(json=>render(json))
+.then(json=> render(json))
 
 const render = array =>{
     array
     .filter(el => el.rating.average >=4.8)
-    .forEach(({image, wine, winery, rating})=>{
+    .forEach(({image, wine, winery, rating})=>{ // деструктуризация объекта wine и проход по каждому вину
+
         const cardElem = document.createElement('div');
-        const titleElem = document.createElement("p");
+        const titleElem = document.createElement("h3");
         const wineryElem = document.createElement("p");
         const ratingElem = document.createElement("p");
         const imgElem = document.createElement("img");
 
 
-        titleElem.innerText = `Title: ${wine}`;
+        titleElem.innerText = `${wine}`;
         wineryElem.innerText = `Winery: ${winery}`;
         ratingElem.innerText = `Rating: ${rating.average}`;
 
         imgElem.src = image;
         imgElem.alt = wine;
 
-        cardElem.style.backgroundColor = rating.average > 4.8 ? "lightgreen": "lightblue";
+        cardElem.style.backgroundColor = rating.average > 4.8 ? "lightgreen": "lightblue"; // устанавливаем цвет фона карточки в зависимости от рейтинга
 
-        cardElem.append(imgElem, titleElem, wineryElem, ratingElem)
+
+        cardElem.append( titleElem, imgElem, wineryElem, ratingElem)
 
         container.append(cardElem);
 
