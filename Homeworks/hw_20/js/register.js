@@ -46,7 +46,7 @@ form.addEventListener("submit", async (e) => {
     }
 
     alert("Регистрация прошла успешно!");
-    //window.location.href = "/login";
+    window.location.href = "../login";
   } catch (err) {
     console.error("Ошибка при регистрации:", err);
     alert("Произошла ошибка при регистрации. Пожалуйста, попробуйте позже.");

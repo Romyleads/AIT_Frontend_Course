@@ -57,8 +57,9 @@ function renderProfile(user) {
   fullNameElem.innerText = name;
   emailElement.innerText = email;
 
-  avatarImg.setAttribute("referrerpolicy", "no-referrer");
-  avatarImg.setAttribute("crossorigin", "anonymous");
+avatarImg.style.width = "100px";
+  //avatarImg.setAttribute("referrerpolicy", "no-referrer");
+  //avatarImg.setAttribute("crossorigin", "anonymous");
   avatarImg.src = avatar;
 }
 
